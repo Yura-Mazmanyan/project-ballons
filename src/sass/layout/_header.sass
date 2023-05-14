@@ -1,0 +1,32 @@
+// Компонент HEADER
+.header
+    height: 100vh
+    position: relative
+    background: linear-gradient(90.05deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%), url("../img/header-bg.jpg") center/cover no-repeat
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%)
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+    
+    @include respond(tab-port)
+        height: 60vh
+
+    &__logo
+        position: absolute
+        height: 7rem
+        width: 4.4rem
+        left: 5rem
+        top: 5rem
+        @include respond(tab-port)
+            top: 3rem
+            height: 5rem
+            width: 4.4rem
+            left: 3rem
+
+    &__box
+        width: 100%
+        position: absolute
+        top: 40%
+        left: 50%
+        transform: translate(-50%, -40%)
+        text-align: center
+        @include respond(tab-land)
+            top: 50%

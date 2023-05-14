@@ -1,0 +1,71 @@
+.feedBack-card
+    width: 85%
+    background: rgba($color-white , 80%)
+    box-shadow: $box-shadow
+    margin: 0 auto
+    padding: 5rem
+    transform: skewX(330deg)
+
+    @include respond(tab-land)
+        transform: skewX(340deg)
+
+    @include respond(tab-port)
+        transform: skewX(360deg)
+        width: 100%
+        padding: 3rem
+
+    &>*
+        transform: skewX(-330deg)
+        @include respond(tab-land)
+            transform: skewX(-340deg)
+        @include respond(tab-port)
+            transform: skewX(-360deg)
+    &__box
+        text-align: left
+        @include respond(tab-port)
+            text-align: center
+    &__img
+        margin-right: 40px
+        width: 15rem
+        height: 15rem
+        background: #000
+        float: left
+        border-radius: 100rem
+        shape-outside: circle(50% at 50% 50%)
+        overflow: hidden
+        position: relative
+        @include respond(tab-port)
+            float: none
+            margin: 0 auto
+            margin-bottom: 2rem
+
+        img
+            height: 100%
+            transform: scale(1.2)
+            transition: all .4s ease-in
+
+    &__name
+        font-family: "Roboto", Arial, Helvetica, sans-serif
+        font-weight: 400
+        font-size: $font-size-paragraph-h3
+        line-height: 2.9rem
+        text-align: center
+        letter-spacing: .2rem
+        color: $color-white
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -20%)
+        opacity: 0
+        transition: all .4s ease-in
+    &:hover &__name
+        opacity: 1
+        transform: translate(-50%, -50%)
+    &:hover img
+        transform: scale(1)
+        filter: blur(.4rem) brightness(70%)
+.bg-video
+    width: 100%
+    height: auto
+    max-height: 100%
+    overflow: hidden

@@ -1,0 +1,78 @@
+// ОСНОВНЫЕ СТИЛИ ДЛЯ ЗАГОЛОВКОВ И ТЕКСТОВ
+.title-first
+    font-family: "Roboto", sans-serif
+    color: $color-white
+    margin-bottom: 6em
+    @include respond(tab-land)
+        margin-bottom: 3rem
+    &__main
+        display: block
+        font-size: 4.4rem
+        letter-spacing: 0.1em
+        font-weight: 800
+        animation-name: leftToRight
+        animation-duration: .5s
+        animation-delay: .5s
+        animation-timing-function: ease-in
+        backface-visibility: hidden
+        @include respond(tab-land)
+            font-size: 3rem
+
+    &__secondry
+        display: block
+        font-weight: 200
+        font-size: 4rem
+        animation-name: rightToLeft
+        animation-duration: .5s
+        animation-delay: .5s
+        animation-timing-function: ease-in
+        backface-visibility: hidden
+        margin-bottom: 6.5rem
+        @include respond(tab-land)
+            font-size: 3rem
+            margin-bottom: 3rem
+
+.title-secondary
+    transition: all .3s ease-in
+    font-family: 'Roboto'
+    font-weight: 800
+    font-size: $font-size-paragraph-h2
+    line-height: 4.3rem
+    letter-spacing: .2rem
+    text-transform: uppercase
+    background: linear-gradient(90deg, $color-brown-light 3.65%, $color-brown-dark 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    @include respond(tab-land)
+        font-size: 3rem
+    @include respond(tab-port)
+        font-size: 2rem
+        
+    &_white
+        color: $color-white
+        background: linear-gradient(90deg, $color-white 3.65%, $color-white 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+    &:hover
+        transform: skew(2deg, 5deg) scale(1.2)
+        text-shadow: $shadow-h2
+        backface-visibility: hidden
+.title-third
+    font-family: 'Roboto'
+    font-weight: 700
+    font-size: $font-size-paragraph-h3
+    color: $color-gray
+    @include respond(tab-land)
+        font-size: 1.8rem
+    @include respond(tab-port)
+        font-size: 1.4rem
+.paragraph
+    font-family: 'Roboto'
+    font-size: $font-size-paragraph-h3
+    line-height: 140%
+    letter-spacing: .2rem
+    color: $color-gray
+    
+    
+        
+

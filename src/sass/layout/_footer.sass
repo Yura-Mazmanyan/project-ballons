@@ -1,0 +1,31 @@
+.footer
+    padding: 8rem
+    background-color: #333333
+    
+    &-logo
+        @include respond(tab-port)
+            width: 6rem
+            height: 7.5rem
+
+    &-list
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 5rem
+        flex-wrap: wrap
+        @include respond(tab-port)
+            gap: 1.5rem
+
+    &__link
+        &:link,&:visited
+            display: inline-block
+            text-transform: uppercase
+            font-family: 'Roboto' sans-serif
+            font-weight: 300
+            font-size: 1.6rem
+            line-height: 1.9rem
+            letter-spacing: .2rem
+            color: $color-white
+        &:hover
+            transform: rotate(5deg) scale(1.2)
+            color: $color-gray

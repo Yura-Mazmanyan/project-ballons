@@ -1,0 +1,26 @@
+.section-about
+    margin-top: 8rem
+    margin-bottom: 20rem
+    @include respond(tab-land)
+        margin-bottom: 12rem
+    @include respond(tab-port)
+        margin-bottom: 40rem
+        margin-top:4rem
+
+.section-adventure
+    background: linear-gradient(90.05deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 99.94%), url("../img/section-adventure.png") center/cover no-repeat
+    padding: 20rem 0
+    transform: skewY(7deg)
+
+    & > *
+        transform: skewY(-7deg )
+.section-tour
+    padding-top: 21rem
+.section-feedBack
+    position: relative
+    padding: 8rem 0
+.section-book
+    padding: 10rem
+    background: linear-gradient(90.05deg, $color-brown-light, $color-brown-dark),
+    @include respond(tab-port)
+        padding: 2rem
